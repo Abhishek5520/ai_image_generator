@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Abhishek5520/ai_image_generator/static/css/main.1ce1e719.css",
+    "main.js": "/Abhishek5520/ai_image_generator/static/js/main.84668d7c.js",
+    "static/js/787.876c6118.chunk.js": "/Abhishek5520/ai_image_generator/static/js/787.876c6118.chunk.js",
+    "static/media/combc.jpg": "/Abhishek5520/ai_image_generator/static/media/combc.da906bd34f394c5c0cba.jpg",
+    "static/media/lm.jpg": "/Abhishek5520/ai_image_generator/static/media/lm.582620e7039070928cce.jpg",
+    "index.html": "/Abhishek5520/ai_image_generator/index.html",
+    "main.1ce1e719.css.map": "/Abhishek5520/ai_image_generator/static/css/main.1ce1e719.css.map",
+    "main.84668d7c.js.map": "/Abhishek5520/ai_image_generator/static/js/main.84668d7c.js.map",
+    "787.876c6118.chunk.js.map": "/Abhishek5520/ai_image_generator/static/js/787.876c6118.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ce1e719.css",
+    "static/js/main.84668d7c.js"
+  ]
+}
