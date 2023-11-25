@@ -1,4 +1,5 @@
 import React, {useRef, useState, useEffect} from 'react'
+import html2canvas from 'html2canvas';
 import './ImageGenerator.css'
 import {MdChevronLeft,MdChevronRight} from 'react-icons/md'
 import default_image from '../Assets/lm.jpg'
@@ -8,6 +9,18 @@ const ImageGenerator = () => {
 
     const [counter, setCounter] = useState(0);
     let inputRef = useRef(null);
+    const divRef = useRef(null);
+
+    const handleCapture = async () => {
+        if (divRef.current) {
+          const canvas = await html2canvas(divRef.current);
+          const dataURL = canvas.toDataURL();
+          const a = document.createElement('a');
+          a.href = dataURL;
+          a.download = 'screenshot.png';
+          a.click();
+        }
+      };
 
     useEffect(() => {
         const storedArray = JSON.parse(localStorage.getItem('myArray')) || [];
@@ -84,13 +97,16 @@ const ImageGenerator = () => {
         <div class="bg-images"></div>
 
         <div className="big-img" id='big-img-box'>
-            <img src={counter <= 0?default_image:image_url[0]} id='big-img' alt=''/>
+           <div className="dwn_img" ref={divRef}>
+           <img src={counter <= 0?default_image:image_url[0]} id='big-img' alt=''/>
+           </div> 
             <span onClick={
                 () => {
                     var element = document.getElementById("big-img-box");
                     element.style.display = "none";
                 }
             }>X</span>
+            <button className="download-btn" onClick={handleCapture}>Share</button>
         </div>
 
         <div className="body">
